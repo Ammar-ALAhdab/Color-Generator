@@ -1,0 +1,179 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.error {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.okBtn {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header {
+  background-color: #3F51B5;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+@media (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+.title {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+.options , label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+
+input[type="text"].errorInput {
+  border: 2px solid red;
+}
+
+input[type="text"]::placeholder {
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  background-color: #2196F3;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.start {
+  position: absolute;
+  font-size: 52px;
+  font-style: italic;
+  color: #aaa;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.colorsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-template-rows: repeat(calc((200 / 10) + 1),minmax(96px,1fr));
+  margin-top: 30px;
+}
+
+.colorBox {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.copy {
+  color: #aaa;
+  text-shadow: 1px 1px #000;
+}
+
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
+  padding: 10px;
+  color: #000;
+}
+
+.infoBox.colorLight {
+  color: #fff;
+}
